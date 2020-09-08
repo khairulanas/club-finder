@@ -31,7 +31,7 @@ class ClubList extends HTMLElement {
       -moz-user-select: none;
       -ms-user-select: none;
       user-select: none;
-  }
+    }
     </style>
     `;
     this.shadowDOM.innerHTML += `<h2 class="placeholder">${message}</h2>`
