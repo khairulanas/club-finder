@@ -50,10 +50,10 @@ class ClubItem extends HTMLElement {
                  -webkit-line-clamp: 10; /* number of lines to show */
              }
          </style>
-         <img class="fan-art-club" src="${this._club.strTeamBadge}" alt="Fan Art">
+         <img class="fan-art-club" src="https://image.tmdb.org/t/p/original${this._club.backdrop_path}" alt="Image Poster">
          <div class="club-info">
-             <h2>${this._club.strTeam}</h2>
-             <p>${this._club.strDescriptionEN}</p>
+             <h2>${this._club.original_title}</h2>
+             <p>${this._club.overview}</p>
          </div>`;
   }
 }
