@@ -1,4 +1,4 @@
-import './club-item.js'
+import './club-item.js';
 
 class ClubList extends HTMLElement {
 
@@ -13,28 +13,27 @@ class ClubList extends HTMLElement {
   }
 
   render() {
-    this.innerHTML = "";
+    this.shadowDOM.innerHTML = "";
     this._clubs.forEach(club => {
       const clubItemElement = document.createElement("club-item");
       clubItemElement.club = club;
       this.shadowDOM.appendChild(clubItemElement);
-    });
+    })
   }
 
   renderError(message) {
     this.shadowDOM.innerHTML = `
-    <style>
-    .placeholder {
-      font-weight: lighter;
-      color: rgba(0,0,0,0.5);
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-    }
-    </style>
-    `;
-    this.shadowDOM.innerHTML += `<h2 class="placeholder">${message}</h2>`
+        <style>
+             .placeholder {
+                   font-weight: lighter;
+                   color: rgba(0,0,0,0.5);
+                   -webkit-user-select: none;
+                   -moz-user-select: none;
+                   -ms-user-select: none;
+                   user-select: none;
+               }
+        </style>`;
+    this.shadowDOM.innerHTML += `<h2 class="placeholder">${message}</h2>`;
   }
 }
 
